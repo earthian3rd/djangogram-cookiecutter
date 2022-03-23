@@ -78,6 +78,9 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "djangogram.users",
+    "djangogram.post",
+    #"djangogram.users.apps.UsersConfig",
+   # "djangogram.post.apps.PostConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

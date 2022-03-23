@@ -19,7 +19,7 @@ class Post(TimeStamedModel):
     author = models.ForeignKey(
         user_model.User,
         null=True,
-        on_delete=CASCADE,
+        on_delete=models.CASCADE,
         related_name='post_author'
     )
     image = models.ImageField(blank=True)
@@ -31,13 +31,13 @@ class Comment(TimeStamedModel):
     author = models.ForeignKey(
         user_model.User,
         null=True,
-        on_delete=CASCADE,
-        related_name='post_author'
+        on_delete=models.CASCADE,
+        related_name='comment_author'
     )
     posts = models.ForeignKey(
         Post,
         null=True,
-        on_delete=CASCADE,
+        on_delete=models.CASCADE,
         related_name='comment_post'
     )
     contents = models.TextField(blank=True)
